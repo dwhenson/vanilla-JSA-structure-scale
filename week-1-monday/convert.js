@@ -1,31 +1,33 @@
 const convert = (function () {
-  const format = function (convertedNumber, units) {
-    return `${convertedNumber.toLocaleString()} ${units}`;
+  const format = function (convertedNumber, units = "") {
+    return `${convertedNumber.toLocaleString()} ${units}`.trim();
   };
 
-  const mgToGrams = function (number) {
-    return format(Number.parseInt(number, 10) / 1000, "grams");
+  const mgToGrams = function (number, units) {
+    return format(Number.parseInt(number, 10) / 1000, units ? "grams" : "");
   };
 
-  const mgToKg = function (number) {
-    return format(Number.parseInt(number, 10) * 1000 * 1000, "kg");
+  const mgToKg = function (number, units) {
+    return format(Number.parseInt(number, 10) * 1000 * 1000, units ? "kg" : "");
   };
 
-  const gramsToMg = function (number) {
-    return format(Number.parseInt(number, 10) * 1000, "mg");
+  const gramsToMg = function (number, units) {
+    return format(Number.parseInt(number, 10) * 1000, units ? "mg" : "");
   };
 
-  const gramsToKg = function (number) {
-    return format(Number.parseInt(number, 10) / 1000, "kg");
+  const gramsToKg = function (number, units) {
+    return format(Number.parseInt(number, 10) / 1000, units ? "kg" : "");
   };
 
-  const kgToMg = function (number) {
-    return format(Number.parseInt(number, 10) * 1000 * 1000, "mg");
+  const kgToMg = function (number, units) {
+    return format(Number.parseInt(number, 10) * 1000 * 1000, units ? "mg" : "");
   };
 
-  const kgToGrams = function (number) {
-    return format(Number.parseInt(number, 10) * 1000, "grams");
+  const kgToGrams = function (number, units) {
+    return format(Number.parseInt(number, 10) * 1000, units ? "grams" : "");
   };
 
   return { mgToGrams, mgToKg, gramsToMg, gramsToKg, kgToMg, kgToGrams };
 })();
+
+convert.gramsToKg(500, true); // ?
