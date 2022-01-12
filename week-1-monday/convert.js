@@ -30,4 +30,4 @@ const convert = (function () {
   return { mgToGrams, mgToKg, gramsToMg, gramsToKg, kgToMg, kgToGrams };
 })();
 
-convert.gramsToKg(500, true); // ?
+convert.kgToGrams(1.5, true); // ?
