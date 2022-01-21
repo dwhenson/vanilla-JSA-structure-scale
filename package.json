@@ -3,7 +3,7 @@
   "description": "JSA - Self Learning",
   "version": "1.0.0",
   "keywords": [],
-  "name": "jsa-self-course",
+  "name": "jsa-adv-course",
   "source": "src/index.html",
   "scripts": {},
   "license": "ISC",
@@ -17,6 +17,7 @@
     "healthier": "^4.0.0",
     "prettier": "2.5",
     "stylelint": "^14.2.0",
+    "stylelint-config-prettier": "^9.0.3",
     "stylelint-order": "^5.0.0",
     "stylelint-scss": "^4.1.0",
     "stylelint-use-logical-spec": "^3.2.2"
